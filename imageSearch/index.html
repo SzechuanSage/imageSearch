@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <title>Image Search Abstraction Layer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/css/imageSearch.css" type="text/css">
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Image Search Abstraction Layer</h1>
+    <div class=userStories>
+      <h3>User Stories</h3>
+      <ul>
+        <li>I can get the image URLs, alt text and page urls for a set of images relating to a given search string.</li>
+        <li>I can skip through the responses by adding a ?offset=N parameter to the URL.</li>
+        <li>I can get a list of the most recently submitted search strings.</li>
+      </ul>
+    </div>
+    <div class="getty">
+      <p>Image search powered by <a href="http://www.gettyimages.com/">Getty Images</a></p>
+    </div>
+    <div class="examples">
+      <h3>To search for images of wombats:</h3>
+      <div class="sampleText">
+        <p>https://fcc-projects-szechuan-sage.c9users.io/search/wombats</p>
+      </div>
+      <h5>Sample Output</h5>
+      <div class="sampleText">
+        <p>[{"id":"53735484","uri":"http://cache2.asset-cache.net/xt/53735484.jpg?v=1&g=fs2|0|editorial_asiapac|35|484&s=1&b=NTU=","title":"Spring Baby Boom At Taronga Zoo"},...]</p>
+      </div>
+      <br>
+      <h3>To search for images of wallabies starting from the second page:</h3>
+      <div class="sampleText">
+        <p>https://fcc-projects-szechuan-sage.c9users.io/search/wallabies?offset=2</p>
+      </div>
+      <h5>Sample Output</h5>
+      <div class="sampleText">
+        <p>[{"id":"101291721","uri":"http://cache3.asset-cache.net/xt/101291721.jpg?v=1&g=fs2|0|editorial38|91|721&s=1&b=OA==","title":"Wallabies Berrick Barnes And Drew Mitchell Meet Model Kristy Hinze"},...]</p>
+      </div>
+      <br>
+      <h3>To show the latest searches:</h3>
+      <div class="sampleText">
+        <p>https://fcc-projects-szechuan-sage.c9users.io/latest</p>
+      </div>
+      <h5>Sample Output</h5>
+      <div class="sampleText">
+        <p>[{"query":"wallabies?offset=2&","time":"2016-06-25 11:19:19"},{"query":"wombats","time":"2016-06-25 11:18:56"}]</p>
+      </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+  </body>
+</html>
